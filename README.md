@@ -1,0 +1,122 @@
+# Collaborative Canvas 🎨  
+A real-time collaborative drawing application built with **Express**, **Socket.IO**, and a lightweight client-side canvas engine.  
+Multiple users can draw together, see each other's cursors, and use tools like brush, colors, sizes, and an eraser — all in real time.
+
+---
+
+## 🚀 Features
+
+- Live drawing shared across all connected users  
+- Real-time cursor indicators for every user  
+- Unique label (A, B, C...) and color assigned to each participant  
+- Brush, eraser, and size control  
+- Maintains clean drawing state logic for conflict-free updates  
+- Modular architecture (client + server separation)
+
+---
+
+## 📦 Installation & Setup
+
+Make sure Node.js (>=16) is installed.
+
+### **1. Clone the project**
+```bash
+git clone <your-repo-url>
+cd collaborative-canvas
+2. Install dependencies
+bash
+Copy code
+npm install
+3. Start the server
+bash
+Copy code
+npm start
+4. Open the app
+Visit:
+
+arduino
+Copy code
+http://localhost:3000
+🧪 Testing With Multiple Users
+To observe real-time collaboration:
+
+Method 1 — Multiple Browser Tabs
+Open the app in one tab.
+
+Open a second tab at
+http://localhost:3000
+
+Draw in one tab → it appears instantly in the other.
+
+Method 2 — Multiple Devices
+Ensure devices are on the same WiFi.
+
+Replace localhost with your computer’s IP:
+
+perl
+Copy code
+http://<your-local-ip>:3000
+Method 3 — Incognito Mode
+Open normal window → User A
+
+Open incognito window → User B
+
+Each session gets:
+
+A unique letter ID (A, B, C, …)
+
+A unique cursor color
+
+🧱 Project Structure
+pgsql
+Copy code
+collaborative-canvas/
+├── client/
+│   ├── index.html
+│   ├── style.css
+│   ├── canvas.js
+│   ├── socket.js
+│   └── main.js
+├── server/
+│   ├── server.js
+│   ├── rooms.js
+│   └── drawing-state.js
+├── package.json
+└── README.md
+⚠️ Known Limitations / Bugs
+No room support yet
+All users join a single default room (planned upgrade).
+
+Cursor flicker on very fast movement
+Cursor-layer redraws might miss a frame on slow devices.
+
+No undo/redo system
+Stroke history is stored, but not exposed to UI yet.
+
+Large drawings can affect performance
+Especially when many users draw simultaneously.
+
+Eraser acts like "draw transparent"
+Works correctly but does not restore previous strokes (not a bug, just expected behavior).
+
+If you'd like, I can help you implement undo/redo, rooms, latency compensation, or drawing compression.
+
+🕒 Time Spent
+Approximately 1.5 days
+(including architecture planning, real-time sync logic, cursor indicators, conflict-free stroke handling, and testing across multiple screens.)
+
+📄 License
+This project is open for personal or educational use.
+Modify freely based on your needs.
+
+
+
+
+
+
+
+
+
+
+
+
