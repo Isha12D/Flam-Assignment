@@ -23,53 +23,54 @@ Make sure Node.js (>=16) is installed.
 ```bash
 git clone <your-repo-url>
 cd collaborative-canvas
-2. Install dependencies
-bash
+```
+### **2. Install dependencies**
+```bash
 Copy code
 npm install
-3. Start the server
-bash
+```
+### **3. Start the server**
+```bash
 Copy code
 npm start
-4. Open the app
+```
+### **4. Open the app**
 Visit:
-
-arduino
-Copy code
+```bash
 http://localhost:3000
-🧪 Testing With Multiple Users
+```
+---
+
+# 🧪 Testing With Multiple Users
 To observe real-time collaboration:
 
-Method 1 — Multiple Browser Tabs
-Open the app in one tab.
-
-Open a second tab at
+### **Method 1 — Multiple Browser Tabs**
+1. Open the app in one tab.
+2. Open a second tab at
+```bash
 http://localhost:3000
+```
 
-Draw in one tab → it appears instantly in the other.
+3. Draw in one tab → it appears instantly in the other.
 
-Method 2 — Multiple Devices
-Ensure devices are on the same WiFi.
-
-Replace localhost with your computer’s IP:
-
-perl
-Copy code
+### **Method 2 — Multiple Devices**
+1. Ensure devices are on the same WiFi.
+2. Replace localhost with your computer’s IP:
+```bash
 http://<your-local-ip>:3000
-Method 3 — Incognito Mode
-Open normal window → User A
-
-Open incognito window → User B
+```
+### **Method 3 — Incognito Mode**
+1. Open normal window → User A
+2. Open incognito window → User B
 
 Each session gets:
+- A unique letter ID (A, B, C, …)
+- A unique cursor color
 
-A unique letter ID (A, B, C, …)
+---
 
-A unique cursor color
-
-🧱 Project Structure
-pgsql
-Copy code
+# 🧱 Project Structure
+```bash
 collaborative-canvas/
 ├── client/
 │   ├── index.html
@@ -83,29 +84,27 @@ collaborative-canvas/
 │   └── drawing-state.js
 ├── package.json
 └── README.md
-⚠️ Known Limitations / Bugs
-No room support yet
-All users join a single default room (planned upgrade).
+```
+---
 
-Cursor flicker on very fast movement
-Cursor-layer redraws might miss a frame on slow devices.
-
-No undo/redo system
-Stroke history is stored, but not exposed to UI yet.
-
-Large drawings can affect performance
+# ⚠️ Known Limitations / Bugs
+1. All users join a single default room.
+2. Cursor-layer redraws might miss a frame on slow devices.
+3. Stroke history is stored, but not exposed to UI yet.
+4. Large drawings can affect performance
 Especially when many users draw simultaneously.
-
-Eraser acts like "draw transparent"
+5. Eraser acts like "draw transparent"
 Works correctly but does not restore previous strokes (not a bug, just expected behavior).
 
-If you'd like, I can help you implement undo/redo, rooms, latency compensation, or drawing compression.
+---
 
-🕒 Time Spent
+# 🕒 Time Spent
 Approximately 1.5 days
 (including architecture planning, real-time sync logic, cursor indicators, conflict-free stroke handling, and testing across multiple screens.)
 
-📄 License
+---
+
+# 📄 License
 This project is open for personal or educational use.
 Modify freely based on your needs.
 
