@@ -21,10 +21,12 @@ Make sure Node.js (>=16) is installed.
 
 ### **1. Clone the project**
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/Isha12D/Flam-Assignment
 cd collaborative-canvas
-2. Install dependencies
-bash
+
+
+### **2. Install dependencies**
+```bash
 Copy code
 npm install
 3. Start the server
